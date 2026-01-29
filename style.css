@@ -4,7 +4,7 @@
   --cream: #FFF9F2;         /* Crema */
   --darkText: #2D2D2D;      /* Texto principal */
   --secondaryText: #757575; /* Texto secundario */
-  --background-light: #FAFAFA; /* Fondo claro */
+  --background-light: #FFC107; /* Fondo amarillo para toda la interfaz */
 }
 
 /* 🎨 Estilos Globales */
@@ -15,13 +15,13 @@ body {
   color: var(--darkText);
 }
 
-/* 📐 Layout del Feed (Grid optimizado) */
+/* 📐 Layout del Feed (Grid optimizado) - Fondo Amarillo */
 #feed-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Optimizado para laptop */
   gap: 12px;
   padding: 16px;
-  background-color: var(--background-light);
+  background-color: #FFC107 !important; /* Fondo amarillo forzado */
 }
 
 /* 🃏 Tarjetas Premium - Fondo Crema con Bordes Redondeados */
@@ -280,4 +280,9 @@ body {
 .border-gradient {
   border: 2px solid;
   border-image: linear-gradient(135deg, var(--primary), #FFA500) 1;
+}
+
+/* 🟨 Header y navegación con fondo amarillo completo */
+.gradient-bg {
+  background: #FFC107 !important; /* Fondo amarillo sólido para header */
 }
