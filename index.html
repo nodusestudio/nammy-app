@@ -16,10 +16,10 @@
     <link rel="apple-touch-icon" href="icons/icon-192x192.png">
     <link rel="manifest" href="manifest.json">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts Tecnológicas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Estilos Personalizados -->
     <link rel="stylesheet" href="style.css">
@@ -36,14 +36,15 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#FF8A00',        // Naranja intenso actualizado
-                        vibrant: '#FFA500',        // Naranja vibrante
-                        cream: '#FFF9F2',          // Beige claro actualizado
-                        darkText: '#2D2D2D',       // Texto oscuro actualizado
-                        secondaryText: '#757575'   // Texto secundario actualizado
+                        primary: '#FF8A00',        // Naranja sólido
+                        yellow: '#FFD700',         // Amarillo sólido banner
+                        cream: '#FFF9F2',          // Crema tarjetas
+                        techBlack: '#2D2D2D',      // Negro tecnológico
+                        secondaryText: '#666666'   // Texto secundario
                     },
                     fontFamily: {
-                        'poppins': ['Poppins', 'sans-serif']
+                        'tech': ['Inter', 'Roboto', '-apple-system', 'sans-serif'],
+                        'sans': ['Inter', 'Roboto', '-apple-system', 'sans-serif']
                     },
                     borderRadius: {
                         'xl': '16px',
@@ -58,7 +59,8 @@
     <!-- Custom Styles -->
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', 'Roboto', -apple-system, sans-serif;
+            font-weight: 400;
         }
         
         .card-aspect {
@@ -174,26 +176,14 @@
         }
     </style>
 </head>
-<body class="gradient-bg min-h-screen font-poppins">
+<body class="gradient-bg min-h-screen font-tech">
     <!-- Fixed Header -->
     <header class="fixed top-0 left-0 right-0 z-40 gradient-bg">
-        <div class="flex items-center justify-between px-6 py-4">
-            <!-- Logo Centrado con Fondo Protector -->
-            <div class="flex items-center justify-center">
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-2">
-                    <img src="logo.png" alt="Ñammy" class="w-auto object-contain" 
-                         style="height: 40px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));">
-                </div>
-            </div>
-            
-            <!-- Right Icons -->
-            <div class="flex items-center space-x-3">
-                <button class="p-3 bg-white/20 backdrop-blur-sm rounded-2xl hover:bg-white/30 transition-colors">
-                    <i data-lucide="search" class="w-5 h-5 text-white"></i>
-                </button>
-                <button class="p-3 bg-white/20 backdrop-blur-sm rounded-2xl hover:bg-white/30 transition-colors">
-                    <i data-lucide="user" class="w-5 h-5 text-white"></i>
-                </button>
+        <div class="flex items-center justify-center px-6 py-4">
+            <!-- Logo Centrado con Padding -->
+            <div class="flex items-center justify-center px-8">
+                <img src="logo.png" alt="Ñammy" class="w-auto object-contain" 
+                     style="height: 40px; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.1));">
             </div>
         </div>
     </header>
@@ -218,24 +208,16 @@
 
     <!-- Main Feed -->
     <main class="main-feed pt-32 md:pt-40 pb-28 px-3">
-        <!-- Banner de Ofertas Dinámico -->
-        <div class="offers-banner mb-4 p-6 relative overflow-hidden rounded-3xl shadow-2xl">
-            <!-- Imagen de fondo de comida de alta calidad -->
-            <div class="absolute inset-0 bg-gradient-to-r from-orange-500/95 to-red-600/95"></div>
-            <div class="absolute inset-0 opacity-30">
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=400&fit=crop&q=80" 
-                     alt="Deliciosa comida" 
-                     class="w-full h-full object-cover"
-                     loading="lazy">
-            </div>
+        <!-- Banner de Ofertas Minimalista -->
+        <div class="offers-banner mb-4 p-6 relative overflow-hidden">
             
             <div class="relative z-10 text-center">
-                <!-- Texto de gancho agresivo -->
+                <!-- Texto de gancho con tipografía tecnológica -->
                 <div class="mb-3">
-                    <span class="text-3xl font-black text-white drop-shadow-lg banner-title">🔥 OFERTA DEL DÍA 🔥</span>
+                    <span class="text-3xl font-black banner-title">🔥 OFERTA DEL DÍA 🔥</span>
                 </div>
-                <h2 class="text-2xl font-bold text-white mb-2 drop-shadow-lg banner-title">2x1 en Combos Familiares</h2>
-                <p class="text-white/90 mb-4 text-base font-medium drop-shadow-sm">🚚 ¡ENVÍO GRATIS en tu primera compra! Válido solo HOY</p>
+                <h2 class="text-2xl font-bold banner-title mb-2">2x1 en Combos Familiares</h2>
+                <p class="banner-title mb-4 text-base font-medium">🚚 ¡ENVÍO GRATIS en tu primera compra! Válido solo HOY</p>
                 
                 <!-- CTA con efecto de pulso mejorado -->
                 <button class="cta-button w-full font-black py-4 px-8 rounded-full transition-all text-lg shadow-xl" 

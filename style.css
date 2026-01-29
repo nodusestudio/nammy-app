@@ -1,27 +1,30 @@
-/* ✨ Variables de Marca Profesionales */
+/* ✨ Variables Minimalistas Tecnológicas */
 :root {
-  --primary-orange: #FF8A00;    /* Naranja principal */
-  --vibrant-yellow: #FFC107;    /* Amarillo vibrante para botones */
+  --primary-orange: #FF8A00;    /* Naranja sólido principal */
+  --banner-yellow: #FFD700;     /* Amarillo sólido para banner */
   --cream: #FFF9F2;             /* Crema para tarjetas */
-  --white-text: #FFFFFF;        /* Texto blanco para títulos */
-  --black-text: #1A1A1A;        /* Texto negro para tarjetas */
+  --white-text: #FFFFFF;        /* Texto blanco */
+  --tech-black: #2D2D2D;        /* Negro tecnológico */
   --secondary-text: #666666;    /* Texto secundario */
-  --soft-cream: #FEF7E8;        /* Crema suave para fondos de logo */
+  --minimal-border: #E5E5E5;    /* Borde sutil */
 }
 
-/* 🎨 Estilos Globales Profesionales */
+/* 🎨 Estilos Globales Minimalistas */
 body {
-  background-color: #FF8A00; /* Fondo naranja sólido profesional */
-  font-family: 'Poppins', sans-serif;
+  background-color: #FF8A00; /* Naranja sólido sin degradados */
+  font-family: 'Inter', 'Roboto', -apple-system, sans-serif;
+  font-weight: 400; /* Peso limpio para cuerpo */
   margin: 0;
-  color: var(--white-text); /* Texto blanco por defecto */
+  color: var(--white-text);
+  line-height: 1.5;
 }
 
-/* Títulos principales en blanco */
+/* Títulos tecnológicos limpios */
 h1, h2, h3.main-title {
   color: var(--white-text) !important;
-  font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Peso limpio para títulos */
+  font-family: 'Inter', 'Roboto', -apple-system, sans-serif;
+  letter-spacing: -0.01em; /* Spacing tecnológico */
 }
 
 /* 📰 Layout del Feed (Grid optimizado) - Fondo Naranja Profesional */
@@ -33,24 +36,25 @@ h1, h2, h3.main-title {
   background-color: #FF8A00 !important; /* Fondo naranja sólido profesional */
 }
 
-/* 🃏 Tarjetas Premium - Fondo Crema con Tipografía Negra */
+/* 🃏 Tarjetas Minimalistas - Look Plano */
 .product-card {
-  background-color: #FFF9F2 !important; /* Fondo crema fijo */
-  border-radius: 24px; /* Bordes redondeados prominentes */
+  background-color: #FFF9F2 !important;
+  border-radius: 16px; /* Bordes redondeados más sutiles */
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-  color: var(--black-text); /* Texto negro en tarjetas */
+  border: 1px solid var(--minimal-border); /* Borde sutil en lugar de sombra */
+  transition: transform 0.15s ease; /* Transición más rápida */
+  color: var(--tech-black);
 }
 
 .product-card:hover {
-  transform: translateY(-4px); /* Efecto lift */
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: translateY(-2px); /* Elevación mínima */
+  border-color: var(--primary-orange); /* Borde naranja en hover */
 }
 
-/* Texto negro para contenido de tarjetas */
+/* Texto negro tecnológico para contenido de tarjetas */
 .product-card * {
-  color: var(--black-text) !important;
+  color: var(--tech-black) !important;
+  font-family: 'Inter', 'Roboto', -apple-system, sans-serif;
 }
 
 /* Excepciones para elementos específicos */
@@ -277,8 +281,8 @@ h1, h2, h3.main-title {
 
 /* ✨ Efectos especiales */
 /* � Tipografía Profesional */
-.font-poppins {
-  font-family: 'Poppins', sans-serif !important;
+.font-tech {
+  font-family: 'Inter', 'Roboto', -apple-system, sans-serif !important;
 }
 
 /* Títulos principales en blanco sobre fondo naranja */
@@ -334,21 +338,21 @@ h1, h2, h3.main-title {
   border-image: linear-gradient(135deg, var(--primary), #FFA500) 1;
 }
 
-/* 🍆 Header y navegación con fondo naranja profesional */
+/* 🍆 Header minimalista con fondo sólido */
 .gradient-bg {
-  background: #FF8A00 !important; /* Fondo naranja sólido profesional */
+  background: #FF8A00 !important; /* Fondo naranja sólido sin degradados */
   position: relative;
 }
 
-/* 🎆 Banner de Ofertas Profesional */
+/* 🎆 Banner Amarillo Sólido Minimalista */
 .offers-banner {
-  background: linear-gradient(135deg, #FF6B35 0%, #FF8A00 50%, #FFA726 100%);
+  background: #FFD700; /* Amarillo sólido sin degradados */
   position: relative;
-  min-height: 180px;
+  min-height: 160px; /* Altura más compacta */
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 12px; /* Bordes más sutiles */
 }
 
 /* 📱 Optimización móvil - Reduce altura del banner */
@@ -363,45 +367,19 @@ h1, h2, h3.main-title {
   }
 }
 
-/* ⚡ CTA Button Amarillo con Pulso Profesional */
+/* ⚡ CTA Minimalista Tecnológico */
 .cta-button {
-  animation: pulse-professional 2s infinite;
-  transform-origin: center;
-  position: relative;
-  overflow: hidden;
-  background: var(--vibrant-yellow) !important;
-  color: var(--black-text) !important;
-  font-family: 'Poppins', sans-serif !important;
-}
-
-.cta-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  transition: left 0.6s ease;
-}
-
-.cta-button:hover::before {
-  left: 100%;
+  background: var(--banner-yellow) !important;
+  color: var(--tech-black) !important;
+  font-family: 'Inter', 'Roboto', -apple-system, sans-serif !important;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  letter-spacing: -0.01em;
 }
 
 .cta-button:hover {
-  transform: scale(1.02);
-  background: #FFD54F !important;
-  box-shadow: 0 12px 35px rgba(255,193,7,0.5) !important;
-}
-
-@keyframes pulse-professional {
-  0%, 60%, 100% {
-    transform: scale(1);
-    box-shadow: 0 8px 25px rgba(255,193,7,0.4);
-  }
-  30% {
-    transform: scale(1.02);
-    box-shadow: 0 12px 35px rgba(255,193,7,0.6);
-  }
+  transform: translateY(-1px);
+  background: #FFED4A !important;
 }
