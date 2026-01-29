@@ -1,10 +1,4 @@
 {
-  "build": {
-    "outputDir": "dist"
-  },
-  "functions": {
-    "runtime": "nodejs18.x"
-  },
   "routes": [
     {
       "src": "/sw.js",
