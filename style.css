@@ -252,16 +252,19 @@ body {
 }
 
 /* ✨ Efectos especiales */
+/* 🔥 Animación de Pulso Sutil Mejorada */
 .pulse-subtle {
-  animation: pulse-subtle 3s infinite;
+  animation: pulse-subtle 2.5s infinite ease-in-out;
 }
 
 @keyframes pulse-subtle {
   0%, 70%, 100% {
     transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 138, 0, 0.3);
   }
   35% {
     transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 138, 0, 0.5);
   }
 }
 
@@ -284,5 +287,67 @@ body {
 
 /* 🟨 Header y navegación con fondo amarillo completo */
 .gradient-bg {
-  background: #FFC107 !important; /* Fondo amarillo sólido para header */
+  background: linear-gradient(135deg, #FFC107 0%, #FF8A00 50%, #FF6B35 100%) !important;
+  position: relative;
+}
+
+/* 🌆 Banner de Ofertas Dinámico */
+.offers-banner {
+  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD23F 100%);
+  position: relative;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📱 Optimización móvil - Reduce altura del banner */
+@media (max-width: 768px) {
+  .offers-banner {
+    min-height: 160px;
+    padding: 20px !important;
+  }
+  
+  .main-feed {
+    padding-top: 120px !important; /* Reduce aún más el espacio en móviles */
+  }
+}
+
+/* ⚡ CTA Button con Pulso Agresivo */
+.cta-button {
+  animation: pulse-aggressive 2s infinite;
+  transform-origin: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.3) !important;
+}
+
+@keyframes pulse-aggressive {
+  0%, 60%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  }
+  30% {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(255,107,53,0.4);
+  }
 }

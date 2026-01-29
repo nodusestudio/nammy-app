@@ -178,9 +178,9 @@
     <!-- Fixed Header -->
     <header class="fixed top-0 left-0 right-0 z-40 gradient-bg">
         <div class="flex items-center justify-between px-6 py-4">
-            <!-- Logo -->
+            <!-- Logo Real -->
             <div class="flex items-center">
-                <img src="logo.svg" alt="Ñammy" class="h-8 w-auto object-contain" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));">
+                <img src="logo.png" alt="Ñammy" class="w-auto object-contain" style="height: 40px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));">
             </div>
             
             <!-- Right Icons -->
@@ -214,19 +214,31 @@
     </div>
 
     <!-- Main Feed -->
-    <main class="pt-40 pb-28 px-3">
-        <!-- Tarjeta Destacada -->
-        <div class="featured-overlay mb-2 p-4 relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-xl font-bold text-darkText mb-2">¡La Doble Carne que soñabas!</h2>
-                <p class="text-secondaryText mb-4 text-sm">Nuestra hamburguesa más jugosa con doble carne, queso derretido y ingredientes frescos.</p>
-                <button class="w-full text-white font-bold py-3 px-6 rounded-full transition-all pulse-subtle text-base" style="background-color: #FF8A00;">
-                    ¡Lo quiero! 🤤
-                </button>
+    <main class="main-feed pt-32 md:pt-40 pb-28 px-3">
+        <!-- Banner de Ofertas Dinámico -->
+        <div class="offers-banner mb-4 p-6 relative overflow-hidden rounded-3xl shadow-2xl">
+            <!-- Imagen de fondo de comida de alta calidad -->
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-500/95 to-red-600/95"></div>
+            <div class="absolute inset-0 opacity-30">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=400&fit=crop&q=80" 
+                     alt="Deliciosa comida" 
+                     class="w-full h-full object-cover"
+                     loading="lazy">
             </div>
-            <!-- Imagen decorativa de fondo -->
-            <div class="absolute -right-6 -bottom-6 w-24 h-24 opacity-20">
-                <div class="w-full h-full rounded-3xl bg-gradient-to-br from-primary to-vibrant"></div>
+            
+            <div class="relative z-10 text-center">
+                <!-- Texto de gancho agresivo -->
+                <div class="mb-3">
+                    <span class="text-3xl font-black text-white drop-shadow-lg">🔥 OFERTA DEL DÍA 🔥</span>
+                </div>
+                <h2 class="text-2xl font-bold text-white mb-2 drop-shadow-lg">2x1 en Combos Familiares</h2>
+                <p class="text-white/90 mb-4 text-base font-medium drop-shadow-sm">🚚 ¡ENVÍO GRATIS en tu primera compra! Válido solo HOY</p>
+                
+                <!-- CTA con efecto de pulso mejorado -->
+                <button class="cta-button w-full text-orange-600 font-black py-4 px-8 rounded-full transition-all text-lg shadow-xl" 
+                        style="background: linear-gradient(135deg, #FFF 0%, #FFF8DC 100%); box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
+                    ¡APROVECHA AHORA! 🤤⚡
+                </button>
             </div>
         </div>
         
