@@ -1,0 +1,52 @@
+{
+  "name": "nammy-app",
+  "version": "1.0.0",
+  "description": "Ñammy - Food & Business Social Discovery PWA",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/",
+    "start": "npx serve . -p 3001",
+    "build": "echo 'Build completed - Static files ready'",
+    "deploy": "vercel --prod",
+    "test": "echo 'Tests not implemented yet'"
+  },
+  "keywords": [
+    "pwa",
+    "food",
+    "social",
+    "discovery",
+    "colombia",
+    "mobile-first",
+    "responsive"
+  ],
+  "author": "Nodus Studio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodusestudio/nammy-app.git"
+  },
+  "homepage": "https://nammy-app.vercel.app",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "iOS >= 12",
+    "Android >= 8"
+  ],
+  "pwa": {
+    "name": "Ñammy",
+    "short_name": "Ñammy",
+    "theme_color": "#FF8A00",
+    "background_color": "#FF8A00",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
+}

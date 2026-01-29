@@ -1,0 +1,136 @@
+{
+  "name": "Ñammy - Food & Business Social Discovery",
+  "short_name": "Ñammy",
+  "description": "Descubre y conecta con los mejores productos y servicios locales",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FF8A00",
+  "theme_color": "#FF8A00",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "es",
+  "dir": "ltr",
+  "categories": ["food", "lifestyle", "social", "business"],
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Para Ti",
+      "short_name": "Para Ti",
+      "description": "Recomendaciones personalizadas",
+      "url": "/?category=para-ti",
+      "icons": [{
+        "src": "icons/icon-192x192.png",
+        "sizes": "192x192"
+      }]
+    },
+    {
+      "name": "Restaurantes",
+      "short_name": "Restaurantes",
+      "description": "Encuentra los mejores restaurantes",
+      "url": "/?category=restaurantes",
+      "icons": [{
+        "src": "icons/icon-192x192.png",
+        "sizes": "192x192"
+      }]
+    },
+    {
+      "name": "Tiendas",
+      "short_name": "Tiendas",
+      "description": "Descubre tiendas locales",
+      "url": "/?category=tiendas",
+      "icons": [{
+        "src": "icons/icon-192x192.png",
+        "sizes": "192x192"
+      }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/home-light.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Pantalla principal de Ñammy"
+    },
+    {
+      "src": "screenshots/categories-light.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Explorar categorías"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+nammy",
+      "url": "/?action=%s"
+    }
+  ]
+}
