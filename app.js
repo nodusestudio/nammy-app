@@ -566,7 +566,7 @@ function createCardHTML(item) {
                 <h3 class="card-title">${item.titulo || item.title}</h3>
                 
                 <!-- Nombre del Negocio Aliado - Prominente -->
-                <p style="font-size: 14px; color: #FF8A00; font-weight: 700; margin: 4px 0 6px 0; text-transform: uppercase;">
+                <p style="font-size: 14px; color: #FF8A00; font-weight: 700; margin: 4px 0 6px 0; text-transform: uppercase; font-family: 'Poppins', sans-serif;">
                     ${item.nombre || item.business}
                 </p>
                 

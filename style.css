@@ -1,40 +1,61 @@
-/* ✨ Variables de Marca */
+/* ✨ Variables de Marca Profesionales */
 :root {
-  --primary: #FF8A00;       /* Naranja */
-  --cream: #FFF9F2;         /* Crema */
-  --darkText: #2D2D2D;      /* Texto principal */
-  --secondaryText: #757575; /* Texto secundario */
-  --background-light: #FFC107; /* Fondo amarillo para toda la interfaz */
+  --primary-orange: #FF8A00;    /* Naranja principal */
+  --vibrant-yellow: #FFC107;    /* Amarillo vibrante para botones */
+  --cream: #FFF9F2;             /* Crema para tarjetas */
+  --white-text: #FFFFFF;        /* Texto blanco para títulos */
+  --black-text: #1A1A1A;        /* Texto negro para tarjetas */
+  --secondary-text: #666666;    /* Texto secundario */
+  --soft-cream: #FEF7E8;        /* Crema suave para fondos de logo */
 }
 
-/* 🎨 Estilos Globales */
+/* 🎨 Estilos Globales Profesionales */
 body {
-  background-color: #FFC107; /* Fondo amarillo vibrante para la marca */
+  background-color: #FF8A00; /* Fondo naranja sólido profesional */
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  color: var(--darkText);
+  color: var(--white-text); /* Texto blanco por defecto */
 }
 
-/* 📐 Layout del Feed (Grid optimizado) - Fondo Amarillo */
+/* Títulos principales en blanco */
+h1, h2, h3.main-title {
+  color: var(--white-text) !important;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 📰 Layout del Feed (Grid optimizado) - Fondo Naranja Profesional */
 #feed-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Optimizado para laptop */
   gap: 12px;
   padding: 16px;
-  background-color: #FFC107 !important; /* Fondo amarillo forzado */
+  background-color: #FF8A00 !important; /* Fondo naranja sólido profesional */
 }
 
-/* 🃏 Tarjetas Premium - Fondo Crema con Bordes Redondeados */
+/* 🃏 Tarjetas Premium - Fondo Crema con Tipografía Negra */
 .product-card {
   background-color: #FFF9F2 !important; /* Fondo crema fijo */
   border-radius: 24px; /* Bordes redondeados prominentes */
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
+  color: var(--black-text); /* Texto negro en tarjetas */
 }
 
 .product-card:hover {
   transform: translateY(-4px); /* Efecto lift */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Texto negro para contenido de tarjetas */
+.product-card * {
+  color: var(--black-text) !important;
+}
+
+/* Excepciones para elementos específicos */
+.product-card .card-subtitle {
+  color: var(--secondary-text) !important;
 }
 
 /* Padding interno reducido para tarjetas más compactas */
@@ -93,20 +114,22 @@ body {
   transform: scale(1.02); /* Zoom sutil */
 }
 
-/* 🔘 Botones Tipo Píldora */
+/* � Botones Amarillos Vibrantes */
 .want-btn {
-  background-color: var(--primary);
-  color: white;
+  background-color: var(--vibrant-yellow) !important;
+  color: var(--black-text) !important; /* Texto negro sobre amarillo */
   border: none;
   border-radius: 50px;
-  padding: 8px 12px;
+  padding: 10px 16px;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
   cursor: pointer;
   transition: all 0.2s;
   width: 100%;
-  margin-top: 6px;
-  margin-bottom: 4px; /* Espacio adicional para evitar superposición */
+  margin-top: 8px;
+  margin-bottom: 4px;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+  font-family: 'Poppins', sans-serif;
 }
 
 .want-btn:active {
@@ -114,8 +137,9 @@ body {
 }
 
 .want-btn:hover {
-  background-color: #E67A00;
-  transform: translateY(-1px);
+  background-color: #FFD54F !important; /* Amarillo más claro en hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
 }
 
 /* 💖 Estados de corazón */
@@ -252,7 +276,32 @@ body {
 }
 
 /* ✨ Efectos especiales */
-/* 🔥 Animación de Pulso Sutil Mejorada */
+/* � Tipografía Profesional */
+.font-poppins {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Títulos principales en blanco sobre fondo naranja */
+.main-title, 
+.banner-title {
+  color: var(--white-text) !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Texto en tarjetas siempre negro */
+.card-content h3,
+.card-content p,
+.card-title {
+  color: var(--black-text) !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Texto secundario en tarjetas */
+.card-subtitle {
+  color: var(--secondary-text) !important;
+}
 .pulse-subtle {
   animation: pulse-subtle 2.5s infinite ease-in-out;
 }
@@ -285,20 +334,21 @@ body {
   border-image: linear-gradient(135deg, var(--primary), #FFA500) 1;
 }
 
-/* 🟨 Header y navegación con fondo amarillo completo */
+/* 🍆 Header y navegación con fondo naranja profesional */
 .gradient-bg {
-  background: linear-gradient(135deg, #FFC107 0%, #FF8A00 50%, #FF6B35 100%) !important;
+  background: #FF8A00 !important; /* Fondo naranja sólido profesional */
   position: relative;
 }
 
-/* 🌆 Banner de Ofertas Dinámico */
+/* 🎆 Banner de Ofertas Profesional */
 .offers-banner {
-  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD23F 100%);
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8A00 50%, #FFA726 100%);
   position: relative;
   min-height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid rgba(255,255,255,0.1);
 }
 
 /* 📱 Optimización móvil - Reduce altura del banner */
@@ -313,12 +363,15 @@ body {
   }
 }
 
-/* ⚡ CTA Button con Pulso Agresivo */
+/* ⚡ CTA Button Amarillo con Pulso Profesional */
 .cta-button {
-  animation: pulse-aggressive 2s infinite;
+  animation: pulse-professional 2s infinite;
   transform-origin: center;
   position: relative;
   overflow: hidden;
+  background: var(--vibrant-yellow) !important;
+  color: var(--black-text) !important;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .cta-button::before {
@@ -328,7 +381,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
   transition: left 0.6s ease;
 }
 
@@ -338,16 +391,17 @@ body {
 
 .cta-button:hover {
   transform: scale(1.02);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.3) !important;
+  background: #FFD54F !important;
+  box-shadow: 0 12px 35px rgba(255,193,7,0.5) !important;
 }
 
-@keyframes pulse-aggressive {
+@keyframes pulse-professional {
   0%, 60%, 100% {
     transform: scale(1);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 25px rgba(255,193,7,0.4);
   }
   30% {
-    transform: scale(1.03);
-    box-shadow: 0 12px 35px rgba(255,107,53,0.4);
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(255,193,7,0.6);
   }
 }
