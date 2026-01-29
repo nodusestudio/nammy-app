@@ -46,14 +46,14 @@ class AppState {
     }
 }
 
-// 📊 Base de Datos Extendida de Aliados por Categoría
+// 📊 Base de Datos Realista de Aliados Locales (30 Aliados)
 const aliados = {
     'restaurantes': [
         {
             id: 1,
             nombre: 'Roal Burger',
             titulo: 'Hamburguesa Doble Carne Premium',
-            categoria: 'Hamburguesas Gourmet',
+            categoria: 'Comida Rápida',
             precio: '$32.900',
             likes: 456,
             imagen: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=320&h=320&fit=crop',
@@ -61,101 +61,101 @@ const aliados = {
         },
         {
             id: 2,
-            nombre: 'Pizza Nonna Italiana',
-            titulo: 'Pizza Quattro Stagioni Artesanal',
-            categoria: 'Pizza Italiana',
+            nombre: 'Pizzería La Toscana',
+            titulo: 'Pizza Napolitana Artesanal',
+            categoria: 'Comida Italiana',
             precio: '$45.500',
             likes: 389,
             imagen: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=320&h=320&fit=crop',
-            descripcion: 'Pizza artesanal con ingredientes frescos'
+            descripcion: 'Pizza artesanal con ingredientes importados de Italia'
         },
         {
             id: 3,
-            nombre: 'Sushi Tokyo Express',
+            nombre: 'Sushi Roll',
             titulo: 'Rolls Especiales Salmón',
             categoria: 'Comida Japonesa',
             precio: '$38.800',
-            likes: 234,
+            likes: 324,
             imagen: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=320&h=320&fit=crop',
-            descripcion: 'Sushi fresco preparado por maestros japoneses'
+            descripcion: 'Sushi fresco preparado por chef japonés'
         },
         {
             id: 4,
-            nombre: 'Tacos El Azteca',
-            titulo: 'Tacos al Pastor Tradicionales',
+            nombre: 'Tacos Don Pedro',
+            titulo: 'Tacos al Pastor Original',
             categoria: 'Comida Mexicana',
-            precio: '$21.500',
-            likes: 367,
+            precio: '$19.500',
+            likes: 278,
             imagen: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=320&h=320&fit=crop',
-            descripcion: 'Auténticos tacos mexicanos con carne al trompo'
+            descripcion: 'Auténticos tacos mexicanos con receta familiar'
         },
         {
             id: 5,
-            nombre: 'Arepas Doña María',
-            titulo: 'Arepa Rellena Mixta',
+            nombre: 'Arepas Doña Carmen',
+            titulo: 'Arepa Rellena Especial',
             categoria: 'Comida Colombiana',
-            precio: '$18.900',
-            likes: 298,
+            precio: '$16.900',
+            likes: 195,
             imagen: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=320&h=320&fit=crop',
             descripcion: 'Arepas tradicionales con relleno casero'
         },
         {
             id: 6,
-            nombre: 'Healthy Bowl Station',
-            titulo: 'Bowl Açaí Energético',
-            categoria: 'Comida Saludable',
-            precio: '$26.300',
-            likes: 187,
-            imagen: 'https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=320&h=320&fit=crop',
-            descripcion: 'Bowl nutritivo con açaí y superalimentos'
+            nombre: 'Café Barista',
+            titulo: 'Cappuccino Artesanal',
+            categoria: 'Cafetería',
+            precio: '$8.500',
+            likes: 167,
+            imagen: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?w=320&h=320&fit=crop',
+            descripcion: 'Café de especialidad con arte latte'
         },
         {
             id: 7,
-            nombre: 'Parrilla Don Carlos',
+            nombre: 'Parrilla El Asador',
             titulo: 'Bandeja Paisa Completa',
             categoria: 'Comida Tradicional',
             precio: '$35.000',
             likes: 445,
             imagen: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=320&h=320&fit=crop',
-            descripcion: 'La bandeja paisa más completa de la ciudad'
+            descripcion: 'La bandeja paisa más auténtica de la ciudad'
         },
         {
             id: 8,
-            nombre: 'Café Barista Premium',
-            titulo: 'Cappuccino Artesanal',
-            categoria: 'Café Especialidad',
-            precio: '$12.500',
+            nombre: 'Panadería San Martín',
+            titulo: 'Croissant Relleno',
+            categoria: 'Panadería',
+            precio: '$6.900',
             likes: 156,
-            imagen: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?w=320&h=320&fit=crop',
-            descripcion: 'Café premium preparado por baristas expertos'
+            imagen: 'https://images.unsplash.com/photo-1555507036-ab794f17fe58?w=320&h=320&fit=crop',
+            descripcion: 'Pan fresco horneado todas las mañanas'
         },
         {
             id: 9,
-            nombre: 'Panadería El Trigo Dorado',
-            titulo: 'Croissant Francés Relleno',
-            categoria: 'Panadería Francesa',
-            precio: '$8.900',
+            nombre: 'Heladeria Polo Norte',
+            titulo: 'Helado Artesanal Premium',
+            categoria: 'Postes y Helados',
+            precio: '$12.500',
             likes: 203,
-            imagen: 'https://images.unsplash.com/photo-1555507036-ab794f17fe58?w=320&h=320&fit=crop',
-            descripcion: 'Croissants horneados diariamente'
+            imagen: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=320&h=320&fit=crop',
+            descripcion: 'Helados artesanales con ingredientes naturales'
         },
         {
             id: 10,
-            nombre: 'Mariscos La Costa',
-            titulo: 'Ceviche Peruano Premium',
-            categoria: 'Mariscos Frescos',
+            nombre: 'Mariscos La Bahia',
+            titulo: 'Ceviche de Camarones',
+            categoria: 'Comida de Mar',
             precio: '$42.000',
             likes: 334,
             imagen: 'https://images.unsplash.com/photo-1579952363873-27d3bfad9c0?w=320&h=320&fit=crop',
-            descripcion: 'Ceviche fresco con pescado del día'
+            descripcion: 'Mariscos frescos del Pacífico colombiano'
         }
     ],
     'farmacias': [
         {
             id: 11,
             nombre: 'Droguería Salud Vital',
-            titulo: 'Kit Vitaminas Completo',
-            categoria: 'Suplementos Vitamínicos',
+            titulo: 'Kit Vitaminas Familiar',
+            categoria: 'Suplementos',
             precio: '$45.600',
             likes: 89,
             imagen: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=320&h=320&fit=crop',
@@ -163,18 +163,28 @@ const aliados = {
         },
         {
             id: 12,
-            nombre: 'Farmacia San Rafael',
-            titulo: 'Botiquín de Primeros Auxilios',
-            categoria: 'Emergencias Médicas',
+            nombre: 'FarmaNorte',
+            titulo: 'Botiquín Primeros Auxilios',
+            categoria: 'Emergencias',
             precio: '$32.400',
             likes: 145,
             imagen: 'https://images.unsplash.com/photo-1576671081837-49000212a370?w=320&h=320&fit=crop',
-            descripcion: 'Kit completo para emergencias del hogar'
+            descripcion: 'Kit completo para emergencias médicas'
         },
         {
             id: 13,
-            nombre: 'Droguería Moderna',
-            titulo: 'Suero Hidratante Facial',
+            nombre: 'Medicamentos Pro',
+            titulo: 'Termómetro Digital',
+            categoria: 'Equipos Médicos',
+            precio: '$18.500',
+            likes: 167,
+            imagen: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=320&h=320&fit=crop',
+            descripcion: 'Medición precisa de temperatura corporal'
+        },
+        {
+            id: 14,
+            nombre: 'Farmacia Central',
+            titulo: 'Crema Hidratante Facial',
             categoria: 'Cuidado Personal',
             precio: '$28.900',
             likes: 234,
@@ -182,59 +192,39 @@ const aliados = {
             descripcion: 'Hidratación profunda para todo tipo de piel'
         },
         {
-            id: 14,
-            nombre: 'Farmacia del Centro',
-            titulo: 'Termómetro Digital',
-            categoria: 'Equipos Médicos',
-            precio: '$18.500',
-            likes: 167,
-            imagen: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=320&h=320&fit=crop',
-            descripcion: 'Medición precisa y rápida de temperatura'
-        },
-        {
             id: 15,
-            nombre: 'Droguería La Salud',
-            titulo: 'Proteína en Polvo Premium',
-            categoria: 'Nutrición Deportiva',
+            nombre: 'Droguería Popular',
+            titulo: 'Proteína Deportiva',
+            categoria: 'Nutrición',
             precio: '$89.900',
             likes: 78,
             imagen: 'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=320&h=320&fit=crop',
-            descripción: 'Proteína de alta calidad para deportistas'
+            descripcion: 'Suplemento nutricional para deportistas'
         },
         {
             id: 16,
-            nombre: 'Farmacia Integral',
-            titulo: 'Kit Cuidado Dental',
-            categoria: 'Higiene Bucal',
+            nombre: 'Farmacia San José',
+            titulo: 'Kit Higiene Bucal',
+            categoria: 'Higiene',
             precio: '$24.700',
             likes: 198,
             imagen: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=320&h=320&fit=crop',
-            descripcion: 'Cepillo eléctrico + pasta dental premium'
+            descripcion: 'Cuidado dental completo y profesional'
         },
         {
             id: 17,
-            nombre: 'Droguería Bienestar',
-            titulo: 'Crema Anti-Edad Avanzada',
-            categoria: 'Cosmética Farmacéutica',
-            precio: '$67.500',
-            likes: 287,
-            imagen: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=320&h=320&fit=crop',
-            descripcion: 'Tratamiento anti-edad con tecnología avanzada'
-        },
-        {
-            id: 18,
-            nombre: 'Farmacia Confianza',
+            nombre: 'Droguería El Descuento',
             titulo: 'Tensiómetro Automático',
-            categoria: 'Monitoreo Salud',
+            categoria: 'Monitoreo',
             precio: '$125.000',
             likes: 156,
             imagen: 'https://images.unsplash.com/photo-1559757165-e6332136b5e5?w=320&h=320&fit=crop',
             descripcion: 'Control preciso de presión arterial'
         },
         {
-            id: 19,
-            nombre: 'Droguería Familiar',
-            titulo: 'Kit Medicamentos Básicos',
+            id: 18,
+            nombre: 'Farmacia La Esperanza',
+            titulo: 'Medicamentos Básicos',
             categoria: 'Medicina General',
             precio: '$38.600',
             likes: 203,
@@ -242,148 +232,158 @@ const aliados = {
             descripcion: 'Medicamentos esenciales para el hogar'
         },
         {
-            id: 20,
-            nombre: 'Farmacia Cruz Verde Plus',
+            id: 19,
+            nombre: 'Droguería Moderna',
             titulo: 'Glucómetro Digital',
             categoria: 'Control Diabético',
             precio: '$95.400',
             likes: 134,
             imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=320&h=320&fit=crop',
-            descripcion: 'Medición precisa de glucosa en sangre'
+            descripcion: 'Medición exacta de glucosa en sangre'
+        },
+        {
+            id: 20,
+            nombre: 'Farmacia Bienestar',
+            titulo: 'Crema Anti-Edad',
+            categoria: 'Cosméticos',
+            precio: '$67.500',
+            likes: 287,
+            imagen: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=320&h=320&fit=crop',
+            descripcion: 'Tratamiento anti-edad con colágeno'
         }
     ],
     'tiendas': [
         {
             id: 21,
-            nombre: 'Supermercado Verde Natural',
-            titulo: 'Canasta Orgánica Semanal',
-            categoria: 'Alimentos Orgánicos',
+            nombre: 'Minimercado La Unión',
+            titulo: 'Canasta Familiar Semanal',
+            categoria: 'Supermercado',
             precio: '$85.900',
             likes: 267,
             imagen: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=320&h=320&fit=crop',
-            descripcion: 'Frutas y verduras orgánicas frescas'
+            descripcion: 'Productos frescos y de primera calidad'
         },
         {
             id: 22,
-            nombre: 'Tienda Tech Solutions',
-            titulo: 'Auriculares Bluetooth Premium',
-            categoria: 'Tecnología Audio',
-            precio: '$189.900',
-            likes: 345,
-            imagen: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=320&h=320&fit=crop',
-            descripcion: 'Audio de alta calidad con cancelación de ruido'
+            nombre: 'Variedades Estilo',
+            titulo: 'Camiseta Algodón Premium',
+            categoria: 'Ropa y Moda',
+            precio: '$35.500',
+            likes: 198,
+            imagen: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=320&h=320&fit=crop',
+            descripcion: 'Ropa de moda con diseños exclusivos'
         },
         {
             id: 23,
-            nombre: 'Moda Urbana Store',
-            titulo: 'Camiseta Algodón Premium',
-            categoria: 'Ropa Casual',
-            precio: '$45.500',
-            likes: 198,
-            imagen: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=320&h=320&fit=crop',
-            descripcion: '100% algodón, diseños únicos y modernos'
+            nombre: 'Tienda El Vecino',
+            titulo: 'Artículos para el Hogar',
+            categoria: 'Hogar y Decoración',
+            precio: '$45.000',
+            likes: 156,
+            imagen: 'https://images.unsplash.com/photo-1463320726281-696a485928c7?w=320&h=320&fit=crop',
+            descripcion: 'Todo para hacer tu hogar más acogedor'
         },
         {
             id: 24,
             nombre: 'Librería El Saber',
             titulo: 'Pack Libros Bestsellers',
-            categoria: 'Literatura Moderna',
+            categoria: 'Libros y Cultura',
             precio: '$125.000',
             likes: 178,
             imagen: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=320&h=320&fit=crop',
-            descripcion: 'Los 5 libros más vendidos del año'
+            descripcion: 'Los mejores libros del año en un solo pack'
         },
         {
             id: 25,
-            nombre: 'Deportes Activos',
-            titulo: 'Kit Entrenamiento Completo',
-            categoria: 'Fitness Equipment',
-            precio: '$234.900',
+            nombre: 'Deportes Champion',
+            titulo: 'Kit Entrenamiento Casa',
+            categoria: 'Deportes y Fitness',
+            precio: '$189.900',
             likes: 289,
             imagen: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=320&h=320&fit=crop',
-            descripcion: 'Todo lo necesario para entrenar en casa'
+            descripcion: 'Equipo completo para entrenar en casa'
         },
         {
             id: 26,
-            nombre: 'Hogar & Decoración',
-            titulo: 'Set Plantas Purificadoras',
-            categoria: 'Decoración Verde',
-            precio: '$67.500',
-            likes: 234,
-            imagen: 'https://images.unsplash.com/photo-1463320726281-696a485928c7?w=320&h=320&fit=crop',
-            descripcion: 'Plantas que purifican el aire de tu hogar'
+            nombre: 'Tecnología Digital',
+            titulo: 'Auriculares Bluetooth',
+            categoria: 'Electrónicos',
+            precio: '$156.900',
+            likes: 345,
+            imagen: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=320&h=320&fit=crop',
+            descripcion: 'Audio de alta definición inalámbrico'
         },
         {
             id: 27,
-            nombre: 'Electro Mundo',
-            titulo: 'Licuadora Multifuncional',
-            categoria: 'Electrodomésticos',
-            precio: '$156.900',
-            likes: 156,
-            imagen: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=320&h=320&fit=crop',
-            descripcion: 'Potente licuadora para smoothies y más'
+            nombre: 'Mascotas Felices',
+            titulo: 'Kit Cuidado Canino',
+            categoria: 'Mascotas',
+            precio: '$67.400',
+            likes: 234,
+            imagen: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=320&h=320&fit=crop',
+            descripcion: 'Todo para el cuidado de tu mascota'
         },
         {
             id: 28,
-            nombre: 'Mascotas Felices',
-            titulo: 'Kit Cuidado Canino',
-            categoria: 'Cuidado Mascotas',
-            precio: '$89.400',
-            likes: 267,
-            imagen: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=320&h=320&fit=crop',
-            descripcion: 'Todo para el cuidado e higiene de tu perro'
-        },
-        {
-            id: 29,
             nombre: 'Belleza Total',
             titulo: 'Kit Maquillaje Profesional',
-            categoria: 'Cosméticos Premium',
+            categoria: 'Belleza y Cosméticos',
             precio: '$198.500',
             likes: 378,
             imagen: 'https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=320&h=320&fit=crop',
-            descripcion: 'Set completo para maquillaje profesional'
+            descripcion: 'Maquillaje profesional para toda ocasión'
         },
         {
-            id: 30,
-            nombre: 'Juguetes & Diversión',
-            titulo: 'Set Juegos Educativos',
-            categoria: 'Juguetes Didácticos',
+            id: 29,
+            nombre: 'Juguetes Mil Colores',
+            titulo: 'Set Juguetes Educativos',
+            categoria: 'Juguetes y Niños',
             precio: '$75.600',
             likes: 145,
             imagen: 'https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=320&h=320&fit=crop',
-            descripcion: 'Juguetes que estimulan el aprendizaje'
+            descripcion: 'Diversión y aprendizaje para los niños'
+        },
+        {
+            id: 30,
+            nombre: 'Ferretería El Martillo',
+            titulo: 'Kit Herramientas Básicas',
+            categoria: 'Ferretería y Construcción',
+            precio: '$89.900',
+            likes: 167,
+            imagen: 'https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=320&h=320&fit=crop',
+            descripcion: 'Herramientas de calidad para el hogar'
         }
     ],
     'para-ti': [] // Se llenará dinámicamente con productos destacados
 };
 
-// 🎨 Función para generar imágenes fallback por categoría
+// 🎨 Imágenes de fallback locales por categoría
 function getImagenFallback(categoria) {
     const fallbacks = {
-        'restaurantes': 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgdmlld0JveD0iMCAwIDMyMCAzMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMzIwIiBmaWxsPSIjRkZDMTA3Ii8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9IjE2MCIgcj0iNDAiIGZpbGw9IiNGRjhBMDAiLz4KPHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeD0iMTQwIiB5PSIxNDAiIHN0cm9rZT0iI0ZGRjlGMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgo8cGF0aCBkPSJtMTkgMy0xIDktNSA1LTQtMS0yIDItMyAzLTItNHoiLz4KPHBhdGggZD0ibTcgOS02IDZ2Mmg4di0yTDMgOWwzLTNaIi8+Cjwvc3ZnPgo8L3N2Zz4K',
-        'farmacias': 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgdmlld0JveD0iMCAwIDMyMCAzMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMzIwIiBmaWxsPSIjRkZDMTA3Ii8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9IjE2MCIgcj0iNDAiIGZpbGw9IiNGRjhBMDAiLz4KPHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeD0iMTQwIiB5PSIxNDAiIHN0cm9rZT0iI0ZGRjlGMiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgo8cGF0aCBkPSJtOCA4aDgiLz4KPHN0cm9rZSBkPSJtMTIgNHY4Ii8+Cjwvc3ZnPgo8L3N2Zz4K',
-        'tiendas': 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgdmlld0JveD0iMCAwIDMyMCAzMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMjAiIGhlaWdodD0iMzIwIiBmaWxsPSIjRkZDMTA3Ii8+CjxjaXJjbGUgY3g9IjE2MCIgY3k9IjE2MCIgcj0iNDAiIGZpbGw9IiNGRjhBMDAiLz4KPHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeD0iMTQwIiB5PSIxNDAiIHN0cm9rZT0iI0ZGRjlGMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgo8cGF0aCBkPSJtNSAxMSA0LTciLz4KPHN0cm9rZSBkPSJtMTkgMTEtNC03Ii8+CjxwYXRoIGQ9Ik0yIDExaDIwdi05SDJ2OXoiLz4KPHN0cm9rZSBkPSJtNyAyMWgtNGwtMSA5aDEzdi05eiIvPgo8L3N2Zz4K'
+        'restaurantes': 'assets/restaurante-default.jpg',
+        'farmacias': 'assets/farmacia-default.jpg', 
+        'tiendas': 'assets/tienda-default.jpg'
     };
     return fallbacks[categoria] || fallbacks['tiendas'];
 }
 
-// 🌐 Función para procesar URL de imagen con proxy y CORS
+// 🌐 Función para procesar URL de imagen con proxy weserv.nl por defecto
 function procesarImagenURL(url) {
-    if (!url || url.startsWith('data:')) return url;
+    if (!url || url.startsWith('data:') || url.startsWith('assets/')) return url;
     
-    // Usar proxy para imágenes externas para evitar CORS
-    if (url.includes('unsplash.com') || url.includes('images.') || !url.includes(window.location.origin)) {
-        return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=320&h=320&fit=cover&a=attention`;
+    // Usar proxy weserv.nl para TODAS las imágenes externas (evita CORS completamente)
+    if (!url.includes(window.location.origin)) {
+        return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=320&h=320&fit=cover&a=attention&output=webp`;
     }
     
     return url;
 }
 
-// 🔄 Función global para manejar errores de carga de imágenes
+// 🔄 Función global para manejar errores de carga de imágenes con fallback local
 function handleImageError(img, categoria) {
     img.src = getImagenFallback(categoria);
     img.onerror = null; // Prevenir bucles infinitos
-    console.log(`🖼️ Imagen fallback aplicada para categoría: ${categoria}`);
+    console.log(`🖼️ Imagen fallback local aplicada para categoría: ${categoria}`);
 }
 
 // 🎯 Generar productos destacados para "Para Ti" 
