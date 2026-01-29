@@ -18,8 +18,8 @@ body {
 /* 📐 Layout del Feed (Grid optimizado) */
 #feed-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Más tarjetas a lo ancho */
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Optimizado para laptop */
+  gap: 12px;
   padding: 16px;
   background-color: var(--background-light);
 }
@@ -49,8 +49,8 @@ body {
 
 /* Títulos más compactos */
 .card-title {
-  font-size: 14px !important;
-  font-weight: 700;
+  font-size: 13px !important;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 4px;
   color: var(--darkText);
@@ -62,8 +62,8 @@ body {
 
 /* Override específico para h3 dentro de product-card */
 .product-card h3 {
-  font-size: 14px !important;
-  font-weight: 700;
+  font-size: 13px !important;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 4px;
   color: var(--darkText);
@@ -106,6 +106,7 @@ body {
   transition: all 0.2s;
   width: 100%;
   margin-top: 6px;
+  margin-bottom: 4px; /* Espacio adicional para evitar superposición */
 }
 
 .want-btn:active {
@@ -163,17 +164,17 @@ body {
 /* 📱 Responsive Design */
 @media (max-width: 640px) {
   #feed-container {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 6px;
+    grid-template-columns: repeat(2, 1fr); /* Exactamente 2 columnas en móvil */
+    gap: 8px;
     padding: 12px;
   }
   
   .card-content {
-    padding: 6px;
+    padding: 8px;
   }
   
   .card-title {
-    font-size: 13px !important;
+    font-size: 12px !important;
   }
   
   .want-btn {
@@ -182,11 +183,29 @@ body {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  #feed-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablet */
+    gap: 10px;
+  }
+}
+
 @media (min-width: 1024px) {
   #feed-container {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en laptop/desktop */
     gap: 12px;
     padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 14px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  #feed-container {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas en pantallas grandes */
+    gap: 14px;
   }
 }
 

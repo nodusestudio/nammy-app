@@ -1,11 +1,11 @@
-const CACHE_NAME = 'nammy-v1.0.2';
+const CACHE_NAME = 'nammy-v1.0.3';
 const urlsToCache = [
   '/',
   '/index.html',
   '/app.js',
   '/style.css',
   '/manifest.json',
-  '/logo.png',
+  '/logo.svg',
   'https://cdn.tailwindcss.com',
   'https://unpkg.com/lucide@latest/dist/umd/lucide.js'
 ];
@@ -127,21 +127,29 @@ self.addEventListener('fetch', (event) => {
         // Para imágenes que fallan, devolver placeholder transparente
         if (event.request.destination === 'image') {
           console.log('🖼️ Imagen falló, devolviendo placeholder transparente');
-          return new Response(
-            new Uint8Array([
-              0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80,
-              0x00, 0x00, 0xf3, 0xf4, 0xf6, 0x00, 0x00, 0x00, 0x21, 0xf9, 0x04,
-              0x01, 0x00, 0x00, 0x00, 0x00, 0x2c, 0x00, 0x00, 0x00, 0x00, 0x01,
-              0x00, 0x01, 0x00, 0x00, 0x02, 0x02, 0x04, 0x01, 0x00, 0x3b
-            ]),
-            {
-              status: 200,
-              headers: { 
-                'Content-Type': 'image/gif',
-                'Cache-Control': 'no-cache'
+          try {
+            return new Response(
+              new Uint8Array([
+                0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80,
+                0x00, 0x00, 0xf3, 0xf4, 0xf6, 0x00, 0x00, 0x00, 0x21, 0xf9, 0x04,
+                0x01, 0x00, 0x00, 0x00, 0x00, 0x2c, 0x00, 0x00, 0x00, 0x00, 0x01,
+                0x00, 0x01, 0x00, 0x00, 0x02, 0x02, 0x04, 0x01, 0x00, 0x3b
+              ]),
+              {
+                status: 200,
+                headers: { 
+                  'Content-Type': 'image/gif',
+                  'Cache-Control': 'no-cache'
+                }
               }
-            }
-          );
+            );
+          } catch (imageError) {
+            console.warn('⚠️ Error creando placeholder:', imageError);
+            return new Response('', {
+              status: 200,
+              headers: { 'Content-Type': 'image/gif' }
+            });
+          }
         }
         
         // Para otros recursos, error silencioso
