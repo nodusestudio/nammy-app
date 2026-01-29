@@ -278,14 +278,14 @@ function createCardHTML(item) {
                 <i data-lucide="heart" class="w-4 h-4 ${heartClass}"></i>
             </button>
             
-            <!-- Image Container con aspect ratio 4:5 -->
-            <div class="relative overflow-hidden bg-gray-100 rounded-t-2xl" style="aspect-ratio: 4/5;">
+            <!-- Image Container cuadrado 1:1 -->
+            <div class="relative overflow-hidden bg-gray-100 rounded-t-2xl" style="aspect-ratio: 1/1;">
                 <img 
                     src="${item.image}" 
                     alt="${item.title}"
                     class="w-full h-full object-cover"
                     loading="lazy"
-                    onerror="this.src='https://via.placeholder.com/320x400/f3f4f6/9ca3af?text=Imagen+no+disponible'"
+                    onerror="this.src='https://via.placeholder.com/320x320/f3f4f6/9ca3af?text=Imagen+no+disponible'"
                 >
                 
                 <!-- Price Tag -->
@@ -298,6 +298,9 @@ function createCardHTML(item) {
             <div class="card-content">
                 <!-- Título -->
                 <h3 class="card-title">${item.title}</h3>
+                
+                <!-- Nombre del Negocio -->
+                <p style="font-size: 12px; color: #FF8A00; font-weight: 600; margin: 2px 0 4px 0;">ROAL BURGER</p>
                 
                 <!-- Negocio y Categoría -->
                 <p class="card-subtitle">${item.business} • ${item.category}</p>
