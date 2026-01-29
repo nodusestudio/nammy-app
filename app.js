@@ -367,6 +367,18 @@ function getImagenFallback(categoria) {
     return fallbacks[categoria] || fallbacks['tiendas'];
 }
 
+// 🌐 Función para procesar URL de imagen con proxy y CORS
+function procesarImagenURL(url) {
+    if (!url || url.startsWith('data:')) return url;
+    
+    // Usar proxy para imágenes externas para evitar CORS
+    if (url.includes('unsplash.com') || url.includes('images.') || !url.includes(window.location.origin)) {
+        return `https://images.weserv.nl/?url=${encodeURIComponent(url)}&w=320&h=320&fit=cover&a=attention`;
+    }
+    
+    return url;
+}
+
 // 🔄 Función global para manejar errores de carga de imágenes
 function handleImageError(img, categoria) {
     img.src = getImagenFallback(categoria);
@@ -521,6 +533,9 @@ function createCardHTML(item) {
          item.categoria?.toLowerCase().includes('salud') || item.categoria?.toLowerCase().includes('vitamin') ? 'farmacias' : 'tiendas') : 
         currentCategory;
     
+    // Procesar URL de imagen con proxy
+    const imagenURL = procesarImagenURL(item.imagen || item.image);
+    
     return `
         <div class="product-card overflow-hidden relative w-full" style="background-color: #FFF9F2;">
             <!-- Heart Button -->
@@ -528,13 +543,14 @@ function createCardHTML(item) {
                 <i data-lucide="heart" class="w-4 h-4 ${heartClass}"></i>
             </button>
             
-            <!-- Image Container cuadrado 1:1 -->
+            <!-- Image Container cuadrado 1:1 con CORS seguro -->
             <div class="relative overflow-hidden bg-gray-100 rounded-t-2xl" style="aspect-ratio: 1/1;">
                 <img 
-                    src="${item.imagen || item.image}" 
+                    src="${imagenURL}" 
                     alt="${item.titulo || item.title}"
                     class="w-full h-full object-cover"
                     loading="lazy"
+                    crossorigin="anonymous"
                     onerror="handleImageError(this, '${categoria}')"
                 >
                 

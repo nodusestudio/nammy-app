@@ -37,7 +37,9 @@ const isExternalImage = (request) => {
   return request.destination === 'image' && 
          !request.url.includes(self.location.origin) &&
          (request.url.includes('unsplash.com') || 
-          request.url.includes('placeholder.com'));
+          request.url.includes('placeholder.com') ||
+          request.url.includes('images.weserv.nl') ||
+          request.url.includes('images.'));
 };
 
 // Install event - Cachear recursos esenciales
@@ -152,52 +154,29 @@ async function staleWhileRevalidate(request) {
   }
 }
 
-// Manejo especializado para imágenes externas con try...catch
+// Manejo especializado para imágenes externas con no-cors
 async function handleExternalImage(request) {
   try {
-    console.log('🖼️ Manejando imagen externa:', request.url);
+    console.log('🖼️ Imagen externa detectada (no se cacheará):', request.url);
     
-    // Intentar cargar desde la red con timeout y manejo de errores específicos
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 8000); // 8 segundos timeout
-    
+    // Para imágenes externas, usar modo no-cors y NO cachear
     try {
       const networkResponse = await fetch(request, { 
-        signal: controller.signal,
-        mode: 'cors',
-        cache: 'default'
+        mode: 'no-cors', // Modo no-cors para evitar problemas de CORS
+        cache: 'default',
+        credentials: 'omit' // No enviar cookies/credenciales
       });
       
-      clearTimeout(timeoutId);
-      
-      // Verificar códigos de error específicos
-      if (networkResponse.status === 404 || networkResponse.status === 503 || 
-          networkResponse.status === 500 || !networkResponse.ok) {
-        console.log(`🚫 Imagen externa falló con status ${networkResponse.status}, usando placeholder`);
-        return createImagePlaceholder();
-      }
-      
-      console.log('✅ Imagen externa cargada correctamente:', request.url);
+      console.log('✅ Imagen externa cargada con no-cors:', request.url);
       return networkResponse;
       
     } catch (fetchError) {
-      clearTimeout(timeoutId);
-      
-      // Manejar diferentes tipos de errores sin lanzar TypeError
-      if (fetchError.name === 'AbortError') {
-        console.log('⏱️ Timeout en imagen externa, usando placeholder:', request.url);
-      } else if (fetchError.name === 'TypeError') {
-        console.log('🌐 Error de red en imagen externa, usando placeholder:', request.url);
-      } else {
-        console.log('❌ Error desconocido en imagen externa, usando placeholder:', request.url, fetchError.message);
-      }
-      
+      console.log('🚫 Error en imagen externa, usando fallback:', request.url, fetchError.message);
       return createImagePlaceholder();
     }
     
   } catch (error) {
-    // Catch final para cualquier error no capturado
-    console.log('🛡️ Error capturado en handleExternalImage, usando placeholder:', error.message);
+    console.log('🛡️ Error general en imagen externa, usando fallback:', error.message);
     return createImagePlaceholder();
   }
 }
@@ -295,6 +274,14 @@ function createImagePlaceholder() {
 
 // Función helper para verificar si la URL debe ser cacheada
 function shouldCache(url) {
+  // No cachear imágenes externas ni servicios de proxy
+  if (url.includes('images.weserv.nl') || 
+      url.includes('unsplash.com') || 
+      url.includes('via.placeholder.com') || 
+      url.includes('images.')) {
+    return false;
+  }
+  
   return !NO_CACHE_URLS.some(domain => url.includes(domain));
 }
 
